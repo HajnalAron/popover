@@ -10,14 +10,13 @@ export default function ParentComp() {
   return (
     <div>
       {isOpen ? (
-        <Popover setPopover={() => setPopover(!isPopover)} />
+        <Popover setPopover={setPopover} />
       ) : (
         <div style={{ color: "white" }}>No popover</div>
       )}
       <button
         onClick={() => {
           setOpen(!isOpen);
-          setPopover(true);
         }}
       >
         Open/Close

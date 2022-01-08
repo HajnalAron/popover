@@ -6,6 +6,7 @@ interface PopoverProps {
 
 export default function Popover(props: PopoverProps) {
   useEffect(() => {
+    props.setPopover(true);
     return () => {
       props.setPopover(false);
     };
